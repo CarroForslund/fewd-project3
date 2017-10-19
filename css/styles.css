@@ -1,0 +1,27 @@
+header {
+  background-color: #2d3945;
+  color: #ffffff;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+fieldset {
+  flex-grow: 1;
+}
+
+.submit-button {
+  background-color: #4ebbb5;
+  color: #ffffff;
+  border-radius: 5px;
+  width: 100%;
+  height: 3em;
+  font-size: 1.2em;
+}
+
+footer {
+  text-align: center;
+}
