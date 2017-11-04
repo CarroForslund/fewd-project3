@@ -45,24 +45,34 @@ fieldset {
   padding: 0;
 }
 
+.contact-information {
+  background-color: #eeeeee;
+  padding: .5em;
+}
+
+.newsletter p {
+  margin-top: 1.8em;
+}
+
 input[type="text"],
 input[type="email"],
 input[type="tel"],
 input[type="number"],
+textarea,
 select {
   background-color: #eff0f1;
   border: 0;
   border-radius: 5px;
   height: 2.5em;
   width: 100%;
-  margin: .5 0em;
+  margin: .5em 0em;
+  box-sizing: border-box;
+  padding: 1.5em;
+  transition-duration: 1s;
+  text-align: left;
 }
 
 textarea {
-  background-color: #eff0f1;
-  border: 0;
-  border-radius: 5px;
-  width: 100%;
   height: 100px;
 }
 
@@ -74,25 +84,27 @@ textarea:focus {
    background-color: #ededed;
 }
 
-input,
-select,
-textarea {
-  margin: .3em 0 1em 0;
-  box-sizing: border-box;
-  padding: 0.1em 1em;
-}
-
 input[type="checkbox"],
 input[type="radio"] {
-  margin-right: .5em;
+  margin: .5em 1em .5em 0;
 }
 
-::placeholder {
+::-webkit-input-placeholder {
   font-size: .7em;
   text-align: right;
   font-style: italic;
-  padding: 1em;
   color: #b2b2b2;
+}
+
+input:-moz-placeholder {
+  font-size: .7em;
+  text-align: right;
+  font-style: italic;
+  color: #b2b2b2;
+}
+
+input{
+  text-align: left;
 }
 
 .submit-button {
@@ -104,6 +116,7 @@ input[type="radio"] {
   font-size: 1.2em;
   text-align: center;
   margin-bottom: 0em;
+  border: 0;
 }
 
 .double {
@@ -111,11 +124,12 @@ input[type="radio"] {
   border-top: 3px solid #2d3945;
   border-bottom: 2px solid #2d3945;
   height: .2em;
-  margin-top: 2em;
+  margin: 2em 0 1em 0;
 }
 
 .single {
   border-bottom: 2px solid #2d3945;
+  margin: 1.5em 0 1em 0;
 }
 
 footer {
@@ -123,4 +137,31 @@ footer {
   font-style: italic;
   text-align: center;
   padding-bottom: 2em;
+}
+
+/* BIGGER SCREEN SIZES
+-------------------------------------*/
+@media screen and (min-width: 768px) {
+
+  main {
+    max-width: 60%;
+    margin: auto;
+  }
+
+  .flex-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  label.flex-item {
+    flex-basis: 30%;
+  }
+
+  input.flex-item,
+  select.flex-item {
+    flex-basis: 70%;
+  }
+
+
 }
