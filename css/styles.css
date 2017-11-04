@@ -1,3 +1,9 @@
+body {
+  font-family: 'Merriweather', serif;
+  color: #8c8c8c;
+  font-weight: 300;
+}
+
 header {
   background-color: #2d3945;
   color: #ffffff;
@@ -9,32 +15,34 @@ header {
 
 header h1 {
   margin: auto;
-  flex: 1;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 1.2em;
+  font-weight: 700;
+  color: #2d3945;
+}
+
+p,
+label {
+  font-size: .9em;
 }
 
 main {
   padding: 1em;
 }
 
+.info-section{
+  text-align: center;
+}
+
 fieldset {
   border: 0;
   margin: 0;
   padding: 0;
-}
-
-::-webkit-input-placeholder, /* Chrome/Opera/Safari */
-::-moz-placeholder, /* Firefox 19+ */
-:-ms-input-placeholder, /* IE 10+ */
-:-moz-placeholder  /* Firefox 18- */ {
-   text-align: right;
-   font-size: 0.875em;
-   font-style: italic;
-   background-color: #eff0f1;
-   border: 0;
-   border-radius: 5px;
-   height: 2.5em;
-   width: 100%;
-   margin: .5 0em;
 }
 
 input[type="text"],
@@ -55,6 +63,7 @@ textarea {
   border: 0;
   border-radius: 5px;
   width: 100%;
+  height: 100px;
 }
 
 input:focus,
@@ -65,6 +74,27 @@ textarea:focus {
    background-color: #ededed;
 }
 
+input,
+select,
+textarea {
+  margin: .3em 0 1em 0;
+  box-sizing: border-box;
+  padding: 0.1em 1em;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  margin-right: .5em;
+}
+
+::placeholder {
+  font-size: .7em;
+  text-align: right;
+  font-style: italic;
+  padding: 1em;
+  color: #b2b2b2;
+}
+
 .submit-button {
   background-color: #4ebbb5;
   color: #ffffff;
@@ -72,8 +102,25 @@ textarea:focus {
   width: 100%;
   height: 3em;
   font-size: 1.2em;
+  text-align: center;
+  margin-bottom: 0em;
+}
+
+.double {
+  border: 0;
+  border-top: 3px solid #2d3945;
+  border-bottom: 2px solid #2d3945;
+  height: .2em;
+  margin-top: 2em;
+}
+
+.single {
+  border-bottom: 2px solid #2d3945;
 }
 
 footer {
+  font-size: .8em;
+  font-style: italic;
   text-align: center;
+  padding-bottom: 2em;
 }
